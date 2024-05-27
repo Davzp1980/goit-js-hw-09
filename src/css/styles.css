@@ -39,7 +39,9 @@
   height: 200px;
   overflow: hidden;
 }
-
+.sl-wrapper {
+  background-color: rgba(46, 47, 66, 0.8);
+}
 /* Gallery */
 
 /* Form */
