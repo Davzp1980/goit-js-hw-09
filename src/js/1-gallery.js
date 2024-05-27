@@ -70,11 +70,13 @@ const ulElem = document.querySelector('.gallery');
 
 function imageTemplate(image) {
   return `<li class="gallery-item">
-	<a class="gallery-link" href="large-image.jpg">
+	<a class="gallery-link" href="${image.original}">
 		<img 
 			class="gallery-image" 
 			src="${image.preview}" 
 			alt="${image.description}" 
+      title="${image.description}"
+      captionsData="dasdasd"
 			/>
 	</a>
 </li>`;
@@ -86,4 +88,7 @@ function imagesTamplate(arr) {
 
 ulElem.innerHTML = imagesTamplate(images);
 
-const lightbox = new SimpleLightbox('.gallery');
+const gallery = new SimpleLightbox('.gallery a', {
+  captionDelay: 250,
+  captionPosition: 'bottom',
+});
